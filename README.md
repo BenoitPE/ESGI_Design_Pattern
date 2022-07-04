@@ -26,3 +26,4 @@ Création d'objets complexes sans avoir à s'occuper des problèmes d'implément
 
 <img src="images/pattern_builder.png" width="200px">
 
+<img src="images/pattern_builder_2.png">
