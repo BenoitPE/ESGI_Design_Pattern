@@ -1,2 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System;
+using cours1;
+
 Console.WriteLine("Hello, World!");
+
