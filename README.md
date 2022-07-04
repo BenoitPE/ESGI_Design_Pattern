@@ -24,6 +24,12 @@ Dans le second schéma, version générique du pattern, les structures sont affi
 
 Création d'objets complexes sans avoir à s'occuper des problèmes d'implémentations
 
-<img src="images/pattern_builder.png" width="200px">
+<img src="images/pattern_builder.png" height="500px">
 
-<img src="images/pattern_builder_2.png">
+<img src="images/pattern_builder_2.png" height="500px">
+
+Ce pattern est utilisé pour séparer l'implémentation d'un cas spécifique de la logique/ du client.
+
+`ConstructeurAbstrait`
+
+`ConstructeurLiasseVéhiculeHtml` et `ConstructeurLiasseVehiculePdf` correspondent à `ConstructeurConcret` 
