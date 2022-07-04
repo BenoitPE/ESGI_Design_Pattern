@@ -24,12 +24,18 @@ Dans le second schéma, version générique du pattern, les structures sont affi
 
 Création d'objets complexes sans avoir à s'occuper des problèmes d'implémentations
 
-<img src="images/pattern_builder.png" height="500px">
+<img src="images/pattern_builder.png">
 
-<img src="images/pattern_builder_2.png" height="500px">
+<img src="images/pattern_builder_2.png">
 
 Ce pattern est utilisé pour séparer l'implémentation d'un cas spécifique de la logique/ du client.
 
-`ConstructeurAbstrait`
+Un client (utilisateur physique ou logiciel) a besoin de construire des objets complexes sans connaître son implémentation.  
+Construire des objets complexes ayant plusieurs implémentations.  
 
-`ConstructeurLiasseVéhiculeHtml` et `ConstructeurLiasseVehiculePdf` correspondent à `ConstructeurConcret` 
+## Factory method
+
+Généraliser la construction
+`Builder` pour préparer la création d'objet
+
+<img src="images/factory_method.png">

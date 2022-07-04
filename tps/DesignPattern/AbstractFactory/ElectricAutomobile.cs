@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace cours1
+namespace abstractFactory
 {
     public class ElectricAutomobile : Automobile
     {
