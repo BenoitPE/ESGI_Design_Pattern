@@ -96,6 +96,10 @@ Exemple de singleton:
     public class Vendeur
     {
         private static Vendeur _instance = null;
+
+        private Vendeur() {
+        }
+
         public static Vendeur Instance()
         {
             if (_instance == null)

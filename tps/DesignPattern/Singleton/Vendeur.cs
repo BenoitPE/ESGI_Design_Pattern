@@ -11,6 +11,10 @@ namespace Singleton
         private static Vendeur _instance = null;
         public int sales { get; set; }
 
+        private Vendeur()
+        {
+        }
+
         public static Vendeur Instance()
         {
             if (_instance == null)
