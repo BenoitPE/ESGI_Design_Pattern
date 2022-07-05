@@ -9,6 +9,9 @@
   - [Factory Method](#factory-method)  
   - [Singleton](#singleton)  
   - [Prototype](#prototype)  
+- [Pattern de structure ou de structuration](#pattern-de-structure-ou-de-structuration)
+  - [Introduction](#intro)
+  - [Adapter](#adapter)
 
 ## Pattern de conception
 Permet de faciliter et optimiser la conception d'objet dans une application.
@@ -81,15 +84,7 @@ Chaque classe qui utilise la liasse vierge doit avoir accès à la même instanc
 
 On doit surtout s'arranger pour qu'on ne puisse pas en créer de nouvelles (avec l'opérateur new)  
 
-### Prototype
-
-Permet de cloner des objets
-
-Le pattern prototype permet la création d'objets à partir d'autres objets appelés "prototypes" disposant d'une méthode `Clone()` qui retourne un objet identique.
-
-<img src="images/prototype.png">
-
-Singleton est une instance globale
+Singleton est une instance globale  
 
 Exemple de singleton:
 ```csharp
@@ -122,3 +117,61 @@ Exemple de singleton:
             Console.WriteLine("Singleton non fonctionnel");
     }
 ```
+
+### Prototype
+
+Permet de cloner des objets  
+
+Le pattern prototype permet la création d'objets à partir d'autres objets appelés "prototypes" disposant d'une méthode `Clone()` qui retourne un objet identique.  
+
+<img src="images/prototype.png">
+
+Exemple du design pattern Prototype:
+```csharp
+public abstract class Document
+{
+  protected string contenu = "";
+
+  public Document duplique()
+  {
+    Document resultat;
+    resultat = (Document)this.MemberwiseClone();
+    return resultat;
+  }
+
+  public void remplit(string informations)
+  {
+    contenu = informations;
+  }
+
+  public abstract void imprime();
+  public abstract void affiche();
+}
+```
+Lien vers [Object.MemberWiseClone](https://docs.microsoft.com/fr-fr/dotnet/api/system.object.memberwiseclone?view=net-6.0)
+
+## Pattern de structure ou de structuration
+
+### Intro
+
+Les patterns de structuration permettant de faciliter l'indépendance de l'interface d'un objet et de son implémentation.  
+
+En fournissant les interfaces ce pattern permet d'encapsuler la composition des objets.  
+
+Cela augmente le niveau d'abstraction d'un système donné un peu à la manière des patterns de création qui encapsulent la création d'objets.  
+
+Ces patterns mettent en avant les interfaces.  
+
+----------
+Exercice: Différence entre Composition et Héritage 
+**Composition**: C'est le fait d'avoir une instance d'une classe dans une autre classe  
+<img src="images/Composition.png">
+
+**Héritage**: Une classe fille hérite des propriétés et des méthodes de la classe parente  
+<img src="images/Héritage.png">
+
+Source: [Composition vs Héritage](https://itexpert.fr/blog/concepts-fondamentaux-poo/#composition)  
+
+----------
+### Adapter
+
