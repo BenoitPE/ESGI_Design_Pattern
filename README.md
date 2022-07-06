@@ -10,10 +10,10 @@
   - [Singleton](#singleton)  
   - [Prototype](#prototype)  
 - [Pattern de structure ou de structuration](#pattern-de-structure-ou-de-structuration)
-  - [Introduction](#intro)
   - [Adapter](#adapter)
   - [Bridge](#bridge)
   - [Decorator](#decorator)
+- [Pattern de comportement](#pattern-de-comportement)
 
 ## Pattern de conception
 Permet de faciliter et optimiser la conception d'objet dans une application.
@@ -242,3 +242,10 @@ Ce pattern permet d'ajouter DYNAMIQUEMENT des fonctionnalités SUPPLEMENTAIRES �
 
 Il s'agit d'une alternative à la création d'une sous-classe qui permettrait d'enrichir l'objet.  
 
+#### Version générique
+<img src="images/decorator_generique.png">
+
+#### Version concrète
+<img src="images/decorator.png">
+
+## Pattern de comportement
