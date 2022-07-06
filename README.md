@@ -175,3 +175,15 @@ Source: [Composition vs Héritage](https://itexpert.fr/blog/concepts-fondamentau
 ----------
 ### Adapter
 
+Le but de ce pattern est de convertir l'interface d'une classe donnée en une interface attendue par des clients afin qu'ils puissent travailler ensemble.  
+
+En résumé, il permet de donner à une classe existante une nouvelle interface pour répondre aux besoins d'un client. 
+
+https://refactoring.guru/design-patterns/adapter
+
+#### Version concrète vue en cours
+<img src="images/adapter.png">
+
+**Composition**: `protected ComposantPdf outilPdf = new ComposantPdf();`.
+
+**Adapter**: Classe `ComposantPdf` car elle hérite de l'interface et permet d'appeler d'autres méthodes
