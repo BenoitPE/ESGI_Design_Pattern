@@ -283,3 +283,24 @@ Ceci facilite les opérations relatives à la requête ex: Annulation, queue, su
 
 <img src="images/command.png">
 <img src="images/command_2.png">
+
+### Iterator
+
+#### Version concrète
+<img src="images/iterator.png">
+
+#### Version générique
+<img src="images/iterator_generique.png">
+
+### Mediator
+
+Son but c'est de construire un objet
+L'objet son role c'est de gréer controler les interactions entre les autres objets
+Les objets ne sont pas censés se connaître entre eux
+Il s'occupe de la gestion
+
+#### Version concrète
+<img src="images/mediator.png">
+
+#### Version générique
+<img src="images/mediator_generique.png">
