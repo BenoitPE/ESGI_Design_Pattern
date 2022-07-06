@@ -12,11 +12,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Éléments de solution", "�
 		..\..\README.md = ..\..\README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Singleton", "Singleton\Singleton.csproj", "{28EEF0CA-3714-4054-B3E2-4D1889036C66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Singleton", "Singleton\Singleton.csproj", "{28EEF0CA-3714-4054-B3E2-4D1889036C66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototype", "Prototype\Prototype.csproj", "{EC78365E-5950-49AE-91D8-0D44F6265637}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prototype", "Prototype\Prototype.csproj", "{EC78365E-5950-49AE-91D8-0D44F6265637}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adapter", "Adapter\Adapter.csproj", "{292A0E10-D364-404D-ACFF-8F59BD21D277}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adapter", "Adapter\Adapter.csproj", "{292A0E10-D364-404D-ACFF-8F59BD21D277}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bridge", "Bridge\Bridge.csproj", "{240E8AB3-316C-42CD-9515-7D3409A0FA73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composite", "Composite\Composite.csproj", "{3B70FD2E-D451-435D-BF76-AC5734930D7F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +48,14 @@ Global
 		{292A0E10-D364-404D-ACFF-8F59BD21D277}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{292A0E10-D364-404D-ACFF-8F59BD21D277}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{292A0E10-D364-404D-ACFF-8F59BD21D277}.Release|Any CPU.Build.0 = Release|Any CPU
+		{240E8AB3-316C-42CD-9515-7D3409A0FA73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{240E8AB3-316C-42CD-9515-7D3409A0FA73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{240E8AB3-316C-42CD-9515-7D3409A0FA73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{240E8AB3-316C-42CD-9515-7D3409A0FA73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B70FD2E-D451-435D-BF76-AC5734930D7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B70FD2E-D451-435D-BF76-AC5734930D7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B70FD2E-D451-435D-BF76-AC5734930D7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B70FD2E-D451-435D-BF76-AC5734930D7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

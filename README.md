@@ -1,6 +1,6 @@
 # ESGI - Design Pattern en C#
 ###### tags: `Sciences U`, `ESGI`, `Design Pattern`, `.NET`, `C#`
-###### date de dernière modification: `04/07/2022`
+###### date de dernière modification: `06/07/2022`
 
 ### Table des matières
 - [Pattern de conception](#pattern-de-conception)  
@@ -12,6 +12,8 @@
 - [Pattern de structure ou de structuration](#pattern-de-structure-ou-de-structuration)
   - [Introduction](#intro)
   - [Adapter](#adapter)
+  - [Bridge](#bridge)
+  - [Decorator](#decorator)
 
 ## Pattern de conception
 Permet de faciliter et optimiser la conception d'objet dans une application.
@@ -25,11 +27,11 @@ Ici `FabriqueVehicule` est une interface qui contient deux signatures de méthod
 
 La classe `Scooter` est une classe mère d'héritage, les classes filles `ScooterElectricité` et `ScooterEssence` utilisent `extends Scooter` pour étendre cette classe.  
 
-#### Version générique vue en cours
-![Architecture de l'application](images/abstract_factory.png)
+#### Version générique
+![Abstract factory](images/abstract_factory2.png)
 
-#### Version concrète vue en cours
-![Architecture de l'application](images/abstract_factory2.png)
+#### Version concrète
+![Architecture de l'application](images/abstract_factory.png)
 
 Dans le second schéma, version générique du pattern, les structures sont affichées de façon plus générique
 `FabriqueConcrète1` et `FabriqueConcrète2` correspondraient à `FabriqueVéhiculeElectricité` et `FabriqueVehiculeEssence`.  
@@ -39,10 +41,10 @@ Dans le second schéma, version générique du pattern, les structures sont affi
 ### Pattern Builder
 
 Création d'objets complexes sans avoir à s'occuper des problèmes d'implémentations
-#### Version générique vue en cours
+#### Version générique
 <img src="images/pattern_builder.png">
 
-#### Version concrète vue en cours
+#### Version concrète
 <img src="images/pattern_builder_2.png">
 
 Ce pattern est utilisé pour séparer l'implémentation d'un cas spécifique de la logique/ du client.
@@ -55,10 +57,10 @@ Construire des objets complexes ayant plusieurs implémentations.
 Généraliser la construction
 `Builder` pour préparer la création d'objet
 
-#### Version générique vue en cours
+#### Version générique
 <img src="images/factory_method_2.png">
 
-#### Version concrète vue en cours
+#### Version concrète
 <img src="images/factory_method.png">
 
 ### Singleton
@@ -74,10 +76,10 @@ Dans certains cas c'est utile d'avoir une classe qui ne peut être définie que 
 Méthode de classe unique chargée de retourner cette instance.  
 Pattern qui fournit une méthode de classe pour retourner cette instance (méthode statique).  
 
-#### Version générique vue en cours
+#### Version générique
 <img src="images/singleton.png">
 
-#### Version concrète vue en cours
+#### Version concrète
 <img src="images/singleton_2.png">
 
 Chaque classe qui utilise la liasse vierge doit avoir accès à la même instance.  
@@ -165,10 +167,10 @@ Ces patterns mettent en avant les interfaces.
 ----------
 Exercice: Différence entre Composition et Héritage 
 **Composition**: C'est le fait d'avoir une instance d'une classe dans une autre classe  
-<img src="images/Composition.png">
+<img src="images/composition.png">
 
 **Héritage**: Une classe fille hérite des propriétés et des méthodes de la classe parente  
-<img src="images/Héritage.png">
+<img src="images/heritage.png">
 
 Source: [Composition vs Héritage](https://itexpert.fr/blog/concepts-fondamentaux-poo/#composition)  
 
@@ -179,11 +181,64 @@ Le but de ce pattern est de convertir l'interface d'une classe donnée en une in
 
 En résumé, il permet de donner à une classe existante une nouvelle interface pour répondre aux besoins d'un client. 
 
-https://refactoring.guru/design-patterns/adapter
+#### Version générique
+<img src="images/adapter_2.png">
+Source: https://refactoring.guru/design-patterns/adapter  
 
-#### Version concrète vue en cours
+#### Version concrète
 <img src="images/adapter.png">
 
 **Composition**: `protected ComposantPdf outilPdf = new ComposantPdf();`.
 
 **Adapter**: Classe `ComposantPdf` car elle hérite de l'interface et permet d'appeler d'autres méthodes
+
+### Bridge
+
+Le pattern est utilisé pour séparer le comportement de l'implémentation de l'interface et de l'implémentation de l'objet.  
+On s'intéresse au demande d'immatriculation des véhicules.  
+Le formulaire de demande d'immatriculation possède deux implémentations différentes.  
+
+Classe abstraite mère: FormulaireImmat
+
+Classe fille :
+- FormulaireImmatHTML
+- FormulaireImmatAPP
+
+Au départ le système a été conçu pour la France uniquement.  
+Ensuite on a du créé en sous-classe FormulaireImmatCH elle aussi abstraite pour avoir également deux sous-classes concrètes (qui sont FormulaireImmatHTML et FormulaireImmatAPP dédiées à la Suisse)  
+
+#### Version générique
+<img src="images/bridge_2.png">
+<img src="images/bridge_3.png">
+
+#### Version concrète
+<img src="images/bridge.png">
+
+ABSTRACTION --> `abstract class`
+IMPLEMENTATION --> `interface`
+
+L'abstract class appelle l'interface
+
+### Composite
+
+Composite est un patron de conception structurel qui permet d’agencer les objets dans des arborescences afin de pouvoir traiter celles-ci comme des objets individuels.  
+
+#### Version générique
+<img src="images/composite_generique.png">
+
+#### Version concrète
+<img src="images/composite.png">
+
+
+C'est comme une profondeur d'arbre
+
+Ce pattern offre un cadre de conception d'une composition d'objets dont on ne connaît pas la profondeur. (On peut utiliser un arbre en tant qu'analogie)  
+
+Les "clients" interagissent avec les objets sans connaitre la structure de l'arbre.  
+
+### Decorator
+
+Ce pattern permet d'ajouter DYNAMIQUEMENT des fonctionnalités SUPPLEMENTAIRES à un objet sans modifier l'interface de l'objet ("les clients de l'objet ne sont pas au courant de la modification")  
+
+Il s'agit d'une alternative à la création d'une sous-classe qui permettrait d'enrichir l'objet.  
+
