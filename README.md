@@ -2,18 +2,24 @@
 ###### tags: `Sciences U`, `ESGI`, `Design Pattern`, `.NET`, `C#`
 ###### date de dernière modification: `06/07/2022`
 
+---------
+
 ### Table des matières
 - [Pattern de conception](#pattern-de-conception)  
-  - [Abstract factory](#abstract-factory)  
-  - [Pattern Builder](#pattern-builder)  
-  - [Factory Method](#factory-method)  
-  - [Singleton](#singleton)  
-  - [Prototype](#prototype)  
+  - [ ] [Abstract factory](#abstract-factory)  
+  - [ ] [Pattern Builder](#pattern-builder)  
+  - [ ] [Factory Method](#factory-method)  
+  - [x] [Singleton](#singleton)  
+  - [ ] [Prototype](#prototype)  
 - [Pattern de structuration](#pattern-de-structure-ou-de-structuration)
-  - [Adapter](#adapter)
-  - [Bridge](#bridge)
-  - [Decorator](#decorator)
+  - [x] [Adapter](#adapter)
+  - [ ] [Bridge](#bridge)
+  - [ ] [Decorator](#decorator)
 - [Pattern de comportement](#pattern-de-comportement)
+  - [ ] [Chain of Responsability](#chain-of-responsability)
+  - [ ] [Command](#command)
+
+---------
 
 ## Pattern de conception
 Permet de faciliter et optimiser la conception d'objet dans une application.
@@ -273,4 +279,7 @@ Le but est de construire une chaine d'objets de manière à ce que si un objet d
 ### Command
 
 Ce pattern transforme une requête en objet  
-Ceci facilite les opérations relatives à la requête ex: Annulation, queue, suivi, etc...
+Ceci facilite les opérations relatives à la requête ex: Annulation, queue, suivi, etc...  
+
+<img src="images/command.png">
+<img src="images/command_2.png">

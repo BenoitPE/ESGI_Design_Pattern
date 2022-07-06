@@ -12,6 +12,7 @@ namespace Adapter
         public EmailNotification()
         {
             smtpService = new SMTPService();
+            Console.WriteLine("The 'EmailNotification' adapter that allows to adapt between 'INotification' and 'SMTPService' has been created");
         }
 
         public void sendNotification(string user, string content)

@@ -12,6 +12,7 @@ namespace Adapter
         public SMSNotification()
         {
             smsService = new SMSService();
+            Console.WriteLine("The 'SMSNotification' adapter that allows to adapt between 'INotification' and 'SMSService' has been created");
         }
 
         public void sendNotification(string user, string content)
