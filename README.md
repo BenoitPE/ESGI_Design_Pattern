@@ -9,7 +9,7 @@
   - [Factory Method](#factory-method)  
   - [Singleton](#singleton)  
   - [Prototype](#prototype)  
-- [Pattern de structure ou de structuration](#pattern-de-structure-ou-de-structuration)
+- [Pattern de structuration](#pattern-de-structure-ou-de-structuration)
   - [Adapter](#adapter)
   - [Bridge](#bridge)
   - [Decorator](#decorator)
@@ -249,3 +249,28 @@ Il s'agit d'une alternative à la création d'une sous-classe qui permettrait d'
 <img src="images/decorator.png">
 
 ## Pattern de comportement
+
+### Introduction
+
+Les pattern de comportement permettent de distribuer des traitements/ des algorithmes entre les objets.  
+
+Ils organisent les interactions en renseignant le "flux de controle" et de traitement au sein d'un système d'objets.  
+
+La distribution se fait soit par héritage soit par "délégation"
+
+### Chain of Responsability
+
+Le but est de construire une chaine d'objets de manière à ce que si un objet de la chaine ne peut répondre à une enquête, il puisse la passer à un "successeur" et ainsi de suite jusqu'à ce que l'un des objets puissent y répondre.
+
+<img src="images/chainOfResponsability.png">
+
+#### Version générique
+<img src="images/chainOfResponsability_generique.png">
+
+#### Version concrète
+<img src="images/chainOfResponsability_2.png">
+
+### Command
+
+Ce pattern transforme une requête en objet  
+Ceci facilite les opérations relatives à la requête ex: Annulation, queue, suivi, etc...
