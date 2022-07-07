@@ -18,8 +18,8 @@ Handler subordinate = new SubordinateHandler();
 Handler superior = new SuperiorHandler();
 Handler boss = new BossHandler();
 
-subordinate.next = superior;
-superior.next = boss;
+subordinate.Next = superior;
+superior.Next = boss;
 
 int[] orderPrices = { 500, 1800, 5000};
 
@@ -28,7 +28,7 @@ Console.WriteLine("| Min price allowed \t | Order price \t | Max price allowed \
 Console.WriteLine(tableSeparator);
 foreach (int price in orderPrices)
 {
-    subordinate.giveResponse(price);
+    subordinate.GiveResponse(price);
 }
 Console.WriteLine(tableSeparator);
 

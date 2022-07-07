@@ -8,12 +8,11 @@ namespace ChainOfResponsibility
 {
     public abstract class Handler
     {
-        public Handler next { protected get; set; }
+        public Handler Next { protected get; set; }
 
-        public abstract void giveResponse(float price);
+        public abstract void GiveResponse(float price);
 
-        public float minimumPrice { get; protected set; }
-        public float maximumPrice { get; protected set; }
+        public float MinimumPrice { get; protected set; }
+        public float MaximumPrice { get; protected set; }
     }
-
 }

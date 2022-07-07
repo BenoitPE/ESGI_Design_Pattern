@@ -10,15 +10,15 @@ namespace ChainOfResponsibility
     {
         public SubordinateHandler()
         {
-            this.minimumPrice = 0;
-            this.maximumPrice = 1000;
+            this.MinimumPrice = 0;
+            this.MaximumPrice = 1000;
         }
-        public override void giveResponse(float price)
+        public override void GiveResponse(float price)
         {
-            if(price >= minimumPrice && price < maximumPrice)
-                Console.WriteLine($"| {minimumPrice} \t \t \t | {price} \t \t | {maximumPrice} \t \t | Subordinate is able to accept");
-            else if(next != null)
-                next.giveResponse(price);
+            if(price >= MinimumPrice && price < MaximumPrice)
+                Console.WriteLine($"| {MinimumPrice} \t \t \t | {price} \t \t | {MaximumPrice} \t \t | Subordinate is able to accept");
+            else if(Next != null)
+                Next.GiveResponse(price);
         }
     }
 }
