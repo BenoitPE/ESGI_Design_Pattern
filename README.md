@@ -3,8 +3,19 @@
 ###### date de dernière modification: `06/07/2022`
 
 ---------
+## Rendu final
 
-### Table des matières
+La solution contenant les patrons implémentés pour la note finale se trouve à cet emplacement:  
+`rendu\PEGAZ_Design_Pattern\PEGAZ_Design_Pattern.sln`
+
+Chaque projet contient un exemple de design pattern et est représenté sous la forme d'une application console.  
+Tous les détails spécifiques au design pattern exécuté sont affichés en premier dans la console.  
+Exemple d'exécution:
+<img src="images/exemple_execution.png">  
+
+---------
+
+## Table des matières
 - [Pattern de conception](#pattern-de-conception)  
   - [x] [Abstract factory](#abstract-factory)  
   - [ ] [Pattern Builder](#pattern-builder)  
