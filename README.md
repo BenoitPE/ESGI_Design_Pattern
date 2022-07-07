@@ -14,12 +14,14 @@
 - [Pattern de structuration](#pattern-de-structure-ou-de-structuration)
   - [x] [Adapter](#adapter)
   - [x] [Bridge](#bridge)
-  - [ ] [Decorator](#decorator)
+  - [x] [Decorator](#decorator)
 - [Pattern de comportement](#pattern-de-comportement)
   - [x] [Chain of Responsability](#chain-of-responsability)
   - [ ] [Command](#command)
   - [ ] [Iterator](#iterator)
   - [ ] [Mediator](#mediator)
+
+Sont cochés les patrons présents dans la solution rendue pour la note finale.
 
 ---------
 
@@ -163,7 +165,7 @@ Lien vers [Object.MemberWiseClone](https://docs.microsoft.com/fr-fr/dotnet/api/s
 
 ## Pattern de structure ou de structuration
 
-### Intro
+### Introduction
 
 Les patterns de structuration permettant de faciliter l'indépendance de l'interface d'un objet et de son implémentation.  
 
