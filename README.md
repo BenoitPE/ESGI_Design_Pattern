@@ -6,7 +6,7 @@
 
 ### Table des matières
 - [Pattern de conception](#pattern-de-conception)  
-  - [ ] [Abstract factory](#abstract-factory)  
+  - [x] [Abstract factory](#abstract-factory)  
   - [ ] [Pattern Builder](#pattern-builder)  
   - [ ] [Factory Method](#factory-method)  
   - [x] [Singleton](#singleton)  
@@ -16,7 +16,7 @@
   - [x] [Bridge](#bridge)
   - [ ] [Decorator](#decorator)
 - [Pattern de comportement](#pattern-de-comportement)
-  - [ ] [Chain of Responsability](#chain-of-responsability)
+  - [x] [Chain of Responsability](#chain-of-responsability)
   - [ ] [Command](#command)
   - [ ] [Iterator](#iterator)
   - [ ] [Mediator](#mediator)
