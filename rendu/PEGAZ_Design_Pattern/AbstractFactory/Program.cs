@@ -22,3 +22,5 @@ tiger.printAnimal();
 
 Reptile komodoDragon = wildAnimal.addReptile("Komodo Dragon");
 komodoDragon.printAnimal();
+
+Console.ReadKey();
