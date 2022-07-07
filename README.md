@@ -24,77 +24,80 @@
 ---------
 
 ## Pattern de conception
-Permet de faciliter et optimiser la conception d'objet dans une application.
+Permet de faciliter et optimiser la conception d'objet dans une application.  
 
 ### Abstract Factory
-`Abstract Factory` est un pattern qui aide à la création d'objet, le but est de regrouper les objets en famille sans avoir à connaitre les bases de ces objets.  
 
-`Abstract Factory` va permettre de déresponsabiliser la classe mère. Pour cela, nous utilisons une interface qui va contenir des signatures de méthodes.  
+> `Abstract Factory` est un patron de conception qui permet de créer des familles d’objets apparentés sans préciser leur classe concrète.  
+> Source: [Refactoring.guru](https://refactoring.guru/fr/design-patterns/abstract-factory)  
+
+Ce pattern aide à la création d'objet, le but est de regrouper les objets en famille sans avoir à connaitre la base de ces objets.    
+
+`Abstract Factory` va permettre de déresponsabiliser la classe mère.  
+Pour cela, nous utilisons une interface qui va contenir des signatures de méthodes.   
+
+#### Version générique
+Dans cette version générique du pattern, les structures sont affichées de façon plus générique
+<img src="images/abstract_factory2.png" height="500">
+
+#### Version concrète
+<img src="images/abstract_factory.png" height="500">
+
+
 
 Ici `FabriqueVehicule` est une interface qui contient deux signatures de méthodes `créeAutomobile()` et `créeScooter()`.  
 
 La classe `Scooter` est une classe mère d'héritage, les classes filles `ScooterElectricité` et `ScooterEssence` utilisent `extends Scooter` pour étendre cette classe.  
 
-#### Version générique
-![Abstract factory](images/abstract_factory2.png)
-
-#### Version concrète
-![Architecture de l'application](images/abstract_factory.png)
-
-Dans le second schéma, version générique du pattern, les structures sont affichées de façon plus générique
 `FabriqueConcrète1` et `FabriqueConcrète2` correspondraient à `FabriqueVéhiculeElectricité` et `FabriqueVehiculeEssence`.  
 
 `ProduitAbstraitA` correspond à scooter et `ProduitAbstraitB` à `Automobile`.  
 
-### Pattern Builder
+### Builder
 
-Création d'objets complexes sans avoir à s'occuper des problèmes d'implémentations
+Le patron de conception `Builder` permet la création d'objets complexes sans avoir à se soucier de problèmes d'implémentations.    
+
+
+Ce pattern est utilisé pour séparer l'implémentation d'un cas spécifique de la logique/ du client.  
+
+Un client (utilisateur physique ou logiciel) a besoin de **construire** des objets complexes sans connaître son implémentation ou a besoin de construire des objets complexes ayant plusieurs implémentations.  
+
 #### Version générique
-<img src="images/pattern_builder.png">
+<img src="images/pattern_builder.png" height="500">
 
 #### Version concrète
-<img src="images/pattern_builder_2.png">
-
-Ce pattern est utilisé pour séparer l'implémentation d'un cas spécifique de la logique/ du client.
-
-Un client (utilisateur physique ou logiciel) a besoin de construire des objets complexes sans connaître son implémentation.  
-Construire des objets complexes ayant plusieurs implémentations.  
+<img src="images/pattern_builder_2.png" height="500">
+  
 
 ### Factory method
 
-Généraliser la construction
-`Builder` pour préparer la création d'objet
+Le principe du design pattern `Factory` est de généraliser la construction
 
 #### Version générique
-<img src="images/factory_method_2.png">
+<img src="images/factory_method_2.png" height="500">
 
 #### Version concrète
-<img src="images/factory_method.png">
+<img src="images/factory_method.png" height="500">  
 
 ### Singleton
 
-Pour les patternes de type factory, on essaie de s'arranger pour que ce soit un singleton.
+Le pattern `Singleton` est utilisé pour créer une instance unique d'une classe.  
+Dans certains cas il peut être utile d'avoir une classe qui ne peut être définie qu'avec une seule instance.    
+La classe implémentant le `Singleton` contient une méthode statique chargée de retourner cette instance.   
 
-Notre application va utiliser la classe liasse vierge (LiasseVierge) qui ne possédera qu'une seule instance.
-
-Pattern abstract factory est susceptible d'utiliser ce type d'instance.
-
-Le pattern singleton est utilisé pour créer une instance unique d'une classe.
-Dans certains cas c'est utile d'avoir une classe qui ne peut être définie que d'une seule instance.  
-Méthode de classe unique chargée de retourner cette instance.  
-Pattern qui fournit une méthode de classe pour retourner cette instance (méthode statique).  
+Pour les patrons de type `Factory`, les développeurs s'arrangent pour que cela soit un `Singleton`.  
+Le patron `Abstract Factory` est également susceptible d'utiliser ce type d'instance. 
 
 #### Version générique
 <img src="images/singleton.png">
 
 #### Version concrète
 <img src="images/singleton_2.png">
+Notre application va utiliser la classe liasse vierge (LiasseVierge) qui ne possédera qu'une seule instance.
 
 Chaque classe qui utilise la liasse vierge doit avoir accès à la même instance.  
 
-On doit surtout s'arranger pour qu'on ne puisse pas en créer de nouvelles (avec l'opérateur new)  
-
-Singleton est une instance globale  
+On également faire en sorte qu'on ne puisse pas créer de nouvelles instances (exemple: ne pas pas pouvoir en créer avec l'opérateur **new**)  
 
 Exemple de singleton:
 ```csharp
@@ -130,13 +133,11 @@ Exemple de singleton:
 
 ### Prototype
 
-Permet de cloner des objets  
-
 Le pattern prototype permet la création d'objets à partir d'autres objets appelés "prototypes" disposant d'une méthode `Clone()` qui retourne un objet identique.  
 
-<img src="images/prototype.png">
+<img src="images/prototype.png" height="500">
 
-Exemple du design pattern Prototype:
+Exemple du design pattern `Prototype`:
 ```csharp
 public abstract class Document
 {
@@ -173,7 +174,7 @@ Cela augmente le niveau d'abstraction d'un système donné un peu à la manière
 Ces patterns mettent en avant les interfaces.  
 
 ----------
-Exercice: Différence entre Composition et Héritage 
+**Exercice: Différence entre Composition et Héritage** 
 **Composition**: C'est le fait d'avoir une instance d'une classe dans une autre classe  
 <img src="images/composition.png">
 
@@ -185,12 +186,12 @@ Source: [Composition vs Héritage](https://itexpert.fr/blog/concepts-fondamentau
 ----------
 ### Adapter
 
-Le but de ce pattern est de convertir l'interface d'une classe donnée en une interface attendue par des clients afin qu'ils puissent travailler ensemble.  
+Le but du design pattern `Adapter` est de convertir l'interface d'une classe donnée en une interface attendue par des clients afin qu'ils puissent travailler ensemble.  
 
-En résumé, il permet de donner à une classe existante une nouvelle interface pour répondre aux besoins d'un client. 
+En résumé, `Adapter` permet de donner à une classe existante une nouvelle interface pour répondre aux besoins d'un client. 
 
 #### Version générique
-<img src="images/adapter_2.png">
+<img src="images/adapter_2.png" height="500">
 Source: https://refactoring.guru/design-patterns/adapter  
 
 #### Version concrète
@@ -202,51 +203,50 @@ Source: https://refactoring.guru/design-patterns/adapter
 
 ### Bridge
 
-Le pattern est utilisé pour séparer le comportement de l'implémentation de l'interface et de l'implémentation de l'objet.  
+Le design pattern `Bridge` est utilisé pour séparer le comportement de l'implémentation de l'interface et de l'implémentation de l'objet.  
+
+#### Version générique
+<img src="images/bridge_2.png" height="500">
+<img src="images/bridge_3.png" height="500">
+
+#### Version concrète
+<img src="images/bridge.png" height="500">
+
 On s'intéresse au demande d'immatriculation des véhicules.  
 Le formulaire de demande d'immatriculation possède deux implémentations différentes.  
 
-Classe abstraite mère: FormulaireImmat
-
-Classe fille :
+Classe abstraite mère: FormulaireImmat  
+Classes filles :
 - FormulaireImmatHTML
 - FormulaireImmatAPP
 
 Au départ le système a été conçu pour la France uniquement.  
-Ensuite on a du créé en sous-classe FormulaireImmatCH elle aussi abstraite pour avoir également deux sous-classes concrètes (qui sont FormulaireImmatHTML et FormulaireImmatAPP dédiées à la Suisse)  
+Ensuite on a du créé en sous-classe FormulaireImmatCH elle aussi abstraite pour avoir également deux sous-classes concrètes (qui sont FormulaireImmatHTML et FormulaireImmatAPP dédiées à la Suisse).  
 
-#### Version générique
-<img src="images/bridge_2.png">
-<img src="images/bridge_3.png">
 
-#### Version concrète
-<img src="images/bridge.png">
+**Partie Abstraction** : `abstract class`
+**Partie Implémentation** : `interface`
 
-ABSTRACTION --> `abstract class`
-IMPLEMENTATION --> `interface`
-
-L'abstract class appelle l'interface
+L'`abstract class` appelle l'`interface`
 
 ### Composite
 
-Composite est un patron de conception structurel qui permet d’agencer les objets dans des arborescences afin de pouvoir traiter celles-ci comme des objets individuels.  
-
-#### Version générique
-<img src="images/composite_generique.png">
-
-#### Version concrète
-<img src="images/composite.png">
+Le design pattern `Composite` est un patron de conception structurel qui permet d’agencer les objets dans des arborescences afin de pouvoir traiter celles-ci comme des objets individuels.  
 
 
-C'est comme une profondeur d'arbre
-
-Ce pattern offre un cadre de conception d'une composition d'objets dont on ne connaît pas la profondeur. (On peut utiliser un arbre en tant qu'analogie)  
+Ce pattern offre un cadre de conception d'une composition d'objets dont on ne connaît pas la profondeur (On peut utiliser un arbre en tant qu'analogie).  
 
 Les "clients" interagissent avec les objets sans connaitre la structure de l'arbre.  
 
+#### Version générique
+<img src="images/composite_generique.png" height="500">
+
+#### Version concrète
+<img src="images/composite.png" height="500">
+
 ### Decorator
 
-Ce pattern permet d'ajouter DYNAMIQUEMENT des fonctionnalités SUPPLEMENTAIRES à un objet sans modifier l'interface de l'objet ("les clients de l'objet ne sont pas au courant de la modification")  
+Ce pattern permet d'ajouter **DYNAMIQUEMENT** des fonctionnalités **SUPPLEMENTAIRES** à un objet sans modifier l'interface de l'objet ("les clients de l'objet ne sont pas au courant de la modification").  
 
 Il s'agit d'une alternative à la création d'une sous-classe qui permettrait d'enrichir l'objet.  
 
@@ -260,11 +260,11 @@ Il s'agit d'une alternative à la création d'une sous-classe qui permettrait d'
 
 ### Introduction
 
-Les pattern de comportement permettent de distribuer des traitements/ des algorithmes entre les objets.  
+Les patrons de comportement permettent de distribuer des traitements/ des algorithmes entre les objets.  
 
 Ils organisent les interactions en renseignant le "flux de controle" et de traitement au sein d'un système d'objets.  
 
-La distribution se fait soit par héritage soit par "délégation"
+La distribution se fait soit par héritage soit par "délégation".  
 
 ### Chain of Responsability
 
@@ -283,8 +283,8 @@ Le but est de construire une chaine d'objets de manière à ce que si un objet d
 Ce pattern transforme une requête en objet  
 Ceci facilite les opérations relatives à la requête ex: Annulation, queue, suivi, etc...  
 
-<img src="images/command.png">
-<img src="images/command_2.png">
+<img src="images/command.png" height="500">
+<img src="images/command_2.png" height="500">
 
 ### Iterator
 
@@ -296,13 +296,13 @@ Ceci facilite les opérations relatives à la requête ex: Annulation, queue, su
 
 ### Mediator
 
-Son but c'est de construire un objet.  
-L'objet son role c'est de gréer controler les interactions entre les autres objets.  
+Le but de `Mediator` est de construire un objet.  
+Le rôle de l'objet est de gérer/controler les interactions entre les autres objets.  
 Les objets ne sont pas censés se connaître entre eux.  
 Il s'occupe de la gestion.  
 
 #### Version concrète
-<img src="images/mediator.png">
+<img src="images/mediator.png" height="500">
 
 #### Version générique
-<img src="images/mediator_generique.png">
+<img src="images/mediator_generique.png" height="500">
