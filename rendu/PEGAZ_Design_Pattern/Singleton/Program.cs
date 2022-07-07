@@ -1,10 +1,9 @@
 ﻿using Singleton;
+using Common;
 
-Console.WriteLine(">--------------------------------------------<");
-Console.WriteLine("Author: Benoit PEGAZ - ESGI Lyon Master Architecture des Logiciels");
-Console.WriteLine("Design Pattern: Singleton\n");
-Console.WriteLine("Description: We are making a shared schedule. An user can add an event in the shared schedule and all users can see it. To do this, we use a Singleton.");
-Console.WriteLine(">--------------------------------------------<\n");
+string description = "We are making a shared schedule. An user can add an event in the shared schedule and all users can see it. To do this, we use a Singleton.";
+
+UI.printCopyright("Singleton", description);
 
 User user1 = new User("Benoit");
 User user2 = new User("Margaux");
